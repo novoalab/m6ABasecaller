@@ -6,8 +6,7 @@ Welcome to the m6ABasecaller GitHub repo!!
 
 The m6ABasecaller allows to directly base-call m6A RNA modifications in **individual reads**, with **single nucleotide resolution**, from direct RNA sequencing nanopore raw FAST5 files, without the need of paired 'control' conditions (knockout, knockout, etc). 
 
-![image-for-github-01](https://github.com/novoalab/m6ABasecaller/assets/44866316/37b99742-53a1-4079-a67e-3043d24905c7)
-
+![alt text](./img/m6ABasecaller_IGV.png "m6ABasecaller_IGV")
 
 ## Table of contents
 - [General Description](#General-description)
