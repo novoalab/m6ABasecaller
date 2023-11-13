@@ -39,6 +39,13 @@ Download the basecalling model rna_r9.4.1_70bps_m6A_hac.cfg and place it in your
 #### a) Option 1 --  All-in-one step solution: Base-call, store modification information and map with ModPhred (recommended option)
 Here we use the tool [ModPhred](https://github.com/novoalab/modPhred) to base-call, encode m6A RNA modification and map the reads in a simple, and efficient manner, with a single command, making it very simple for the user to use alternative basecalling models.  ModPhred performs the base-calling step using Guppy. The data is stored both in the FASTQ and BAM files, in the QUALITY INFORMATION. please note that with this option you are not going to save basecalled fast5 files! 
 
+For this  option you need to download a singularity image with everything you need for ModPhred:
+
+```
+singularity pull docker://lpryszcz/modphred-3.6.1
+```
+
+
 Usage: 
 ```
 -c: config for guppy, containing the m6A basecaller model. (for m6A basecaller: rna_r9.4.1_70bps_m6A_hac.cfg)
