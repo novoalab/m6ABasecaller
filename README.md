@@ -71,7 +71,9 @@ Usage:
 guppy_basecaller –i path/to/sample/fast5 –s path/to/sample/output –c ont-guppy/data/rna_r9.4.1_70bps_m6A_hac.cfg
 ```
 
-To use modPhred on previously m6A-basecalled fast5 files you can it as follows (no need for GPU at this point): 
+To use modPhred on previously m6A-basecalled fast5 files you can it as follows (no need for GPU at this point). 
+
+Usage:
 
 ```
 -f: your reference.fa file
@@ -83,8 +85,7 @@ singularity exec modPhred/modphred-3.6.1.sif modPhred/run -f reference.fa -o m6A
 
 ```
 
-modPhred will produce a mod.gz output file that contains all the sites that were found with at least 25 reads of coverage and at least 5% modification frequency in one sample, with information about coverage, modification probability, modification frequency and basecalling accuracy for each sample. For more information on the output see [https://modphred.readthedocs.io/en/latest/ ](https://modphred.readthedocs.io/en/latest/)
-
+modPhred will produce a mod.gz output file that contains all the sites that were found with at least 25 reads of coverage and at least 5% modification frequency in one sample, with information about coverage, modification probability, modification frequency and basecalling accuracy for each sample. For more information on the output see [https://modphred.readthedocs.io/en/latest/output.html](https://modphred.readthedocs.io/en/latest/output.html)
 
 
 ## Dependencies and versions
