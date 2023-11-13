@@ -37,11 +37,12 @@ Download the basecalling model rna_r9.4.1_70bps_m6A_hac.cfg and place it in your
 
 
 #### a) Option 1 --  All-in-one step solution: Base-call, store modification information and map with ModPhred (recommended option)
-Here we use the tool [ModPhred](https://github.com/novoalab/modPhred) to base-call, encode m6A RNA modification and map the reads in a simple, and efficient manner, with a single command, making it very simple for the user to use alternative basecalling models.  ModPhred performs the base-calling step using Guppy. The data is stored both in the FASTQ and BAM files, in the QUALITY INFORMATION. please note that with this option you are not going to save basecalled fast5 files! 
+Here we use the tool [ModPhred](https://github.com/novoalab/modPhred) to base-call, encode m6A RNA modification and map the reads in a simple, and efficient manner, with a single command, making it very simple for the user to use alternative basecalling models.  ModPhred performs the base-calling step using Guppy, and here we show how to run it with GPU. The data is stored both in the FASTQ and BAM files, in the QUALITY INFORMATION. Please note that with this option you are not going to save basecalled fast5 files! 
 
-For this  option you need to download a singularity image with everything you need for ModPhred:
+For this  option you need to download a singularity image with everything you need for ModPhred, we suggest to download it inside modPhred folder:
 
 ```
+cd modPhred
 singularity pull docker://lpryszcz/modphred-3.6.1
 ```
 
@@ -53,6 +54,7 @@ Usage:
 -f: your reference.fa file
 -o: path to output folder
 -i: path to input folders (containing the fast5 files). You can provide >=1 input folders
+[--nv is to use singularity in a GPU node]
 
 module load Singularity/3.2.1
 singularity exec --nv modPhred/modphred-3.6.1.sif modPhred/run -c ont-guppy/data/rna_r9.4.1_70bps_m6A_hac.cfg --host soft/ont-guppy/bin/guppy_basecall_server -f reference.fa -o m6A_basecaller -i path/to/sample1  path/to/sample2  path/to/sample3 
@@ -62,17 +64,34 @@ singularity exec --nv modPhred/modphred-3.6.1.sif modPhred/run -c ont-guppy/data
 For more details on how to use ModPhred, please see the [GitHub](https://github.com/novoalab/modPhred) repository and the [ReadTheDocs](https://modphred.readthedocs.io/en/latest/install.html) manual.
 
 #### b) Option 2 -- Base-call with Guppy 
-You may use this model standalone with Guppy, and then use megalodon or ModPhred to extract and process the RNA modification information. Please note that if you use megalodon, your RNA modification information will be encoded in the form of SAM tags. If you use ModPhred, your RNA modification information will be encoded in the quality of the FASTQ and BAM. (future version of ModPhred will allow to encode modification information directly in SAM tags). In this work, all data was basecalled with Guppy 3.4.5.
+You may use this model standalone with Guppy, and then use megalodon or ModPhred to extract and process the RNA modification information. Please note that if you use megalodon, your RNA modification information will be encoded in the form of SAM tags. If you use ModPhred, your RNA modification information will be encoded in the quality of the FASTQ and BAM (future version of ModPhred will allow to encode modification information directly in SAM tags). In this work, all data was basecalled with Guppy 3.4.5, but other Guppy versions can work as well as the model provided is custom.
 
 Usage: 
 ```
 guppy_basecaller –i path/to/sample/fast5 –s path/to/sample/output –c ont-guppy/data/rna_r9.4.1_70bps_m6A_hac.cfg
 ```
 
+To use modPhred on previously m6A-basecalled fast5 files you can it as follows (no need for GPU at this point): 
+
+```
+-f: your reference.fa file
+-o: path to output folder
+-i: path to input folders (containing the fast5 files). You can provide >=1 input folders
+
+module load Singularity/3.2.1
+singularity exec modPhred/modphred-3.6.1.sif modPhred/run -f reference.fa -o m6A_basecaller -i path/to/sample1  path/to/sample2  path/to/sample3 
+
+```
+
+modPhred will produce a mod.gz output file that contains all the sites that were found with at least 25 reads of coverage and at least 5% modification frequency in one sample, with information about coverage, modification probability, modification frequency and basecalling accuracy for each sample. For more information on the output see [https://modphred.readthedocs.io/en/latest/ ](https://modphred.readthedocs.io/en/latest/)
+
+
+
 ## Dependencies and versions
 
 Software | Version 
 --- | ---
+Singularity | 3.2.1
 ModPhred | 1.0b
 venn | 0.1.3
 pybedtools | 0.8.1
