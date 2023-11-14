@@ -94,9 +94,7 @@ Software | Version
 --- | ---
 Singularity | 3.2.1
 ModPhred | 1.0b
-venn | 0.1.3
-pybedtools | 0.8.1
-meme | 4.11.2
+
 
 ## Citation
   
