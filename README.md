@@ -94,6 +94,7 @@ Software | Version
 --- | ---
 Singularity | 3.2.1
 ModPhred | 1.0b
+Guppy  |  any between 3.4.5 and 6.0.6
 
 
 ## Citation
