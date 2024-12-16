@@ -1,4 +1,4 @@
-## In this folder we provide the results of the analysis performed with the scripts included in this repo: 
+## In this folder we provide the results of the analysis performed with the m6ABasecaller: 
 
 * PerPosition folder contains tables with information about m6A position and modification frequency in:
 
@@ -10,7 +10,9 @@
  
 * PerRead folder contains tables with information about m6A frequency calculated at
   - per gene level, in 3 replicates (*_PerGene.tsv)
+    
   - per isoform level, in 3 replicates (*_PerIsoform.tsv)
-  - for each position shared by two or more isoforms, difference in modification frequency between each pair       of isoforms, in 3 replicates (DiffModFreq_PerIsoform_*)
+    
+  - for each position shared by two or more isoforms, difference in modification frequency between each pair of isoforms, in 3 replicates (DiffModFreq_PerIsoform_*)
 
   
