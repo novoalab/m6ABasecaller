@@ -1,7 +1,7 @@
 In this folder, you can find 5 BED files, which correspond to the list of m6A sites predicted by m6ABasecaller in different publicly available direct RNA nanopore sequencing datasets. 
 * The table below includes a brief description of each of the BED files that can be found in this folder. 
 * We only list a site as "m6A-modified" if the site has at least 25 reads of coverage in the given dataset,and a minimum per-site modification frequency of 5%.
-* We should note that prediction of m6A modifications is done per-read, not per-site.
+
 
 
 
