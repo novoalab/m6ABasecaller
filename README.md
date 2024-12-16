@@ -1,13 +1,11 @@
-<img align="right" height="200" src="/img/logo_m6ABC.jpg">
-
 
 # m6ABasecaller
 
-Welcome to the m6ABasecaller GitHub repo!! 
+<img align="right" height="170" src="/img/logo_m6ABC.jpg">
 
-The m6ABasecaller allows to directly base-call m6A RNA modifications in **individual reads**, with **single nucleotide resolution**, from direct RNA sequencing nanopore raw FAST5 files, without the need of paired 'control' conditions (knockout, knock down, etc). 
+Welcome to the m6ABasecaller GitHub repo!
 
-![image-for-github-01](https://github.com/novoalab/m6ABasecaller/assets/44866316/37b99742-53a1-4079-a67e-3043d24905c7)
+The m6ABasecaller allows to directly base-call m6A RNA modifications in **individual reads**, with **single nucleotide resolution**, from direct RNA sequencing nanopore raw FAST5 files without the need of paired 'control' conditions (knockout, knock down, etc). 
 
 
 ## Table of contents
