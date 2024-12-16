@@ -1,0 +1,43 @@
+# Parameters
+
+# Needed for fast5 input
+fast5: "/path/to/raw/fast5/files/*.fast5"
+## This can be empty but then you need to add specify kit and flowcell via command line inside pars_tools
+conffile: ""
+## Can be wither guppy or dorado
+basecalling: "guppy"
+## Can be OFF / cuda10 / cuda11. Newer version of GUPPY may require cuda11
+GPU: "cuda11"
+demultiplexing: "NO"
+demulti_fast5: "NO"
+### Number of fast5 basecalled per parallel job
+granularity: 5
+### File with the list of accepted barcodes. It can be empty
+barcodes: ""
+
+# Needed for fastq input
+fastq: ""
+
+# Common
+reference: ""
+## Can be transcriptome / genome
+ref_type: ""
+annotation: ""
+## command line options
+pars_tools: "tool_opts/drna_tool_m6A_splice_opt.tsv"
+## Cut off quality for QC
+qualityqc: 5
+## Can be nanoq / nanofilt
+filtering: "NO"
+## Can be graphmap / graphmap2 / minimap2 / bwa
+mapping: "NO"
+## Can be nanocount for transcriptome / htseq for genome
+counting: "NO"
+## Can be NO / bambu / isoquant
+discovery: "NO"
+## Convert bam to cram
+cram_conv: "NO"
+subsampling_cram: 50
+hook: ""
+email: ""
+output: "/path/to/your/output/folder"
