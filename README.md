@@ -17,7 +17,7 @@ The m6ABasecaller allows to directly base-call m6A RNA modifications in **indivi
 	- [Option 1: m6A basecalling and modification encoding with Master of Pores](#option-1-m6a-basecalling-and-modification-encoding-with-master-of-pores)
 	- [Option 2: Basecalling with m6A basecalling model and modification encoding with modPhred](#option-2-basecalling-with-m6A-basecalling-model-and-modification-encoding-with-modphred)
 	- [Option 3: modPhred on-the-fly](#option-3-modphred-on-the-fly)
-- [Expected Output and Downstream Analyses](#Expected-output-and-downstream-analyses)
+- [Expected Output](#Expected-output)
 - [Citation](#Citation) 
 - [Contact](#Contact)
 
@@ -177,7 +177,7 @@ Guppy | tested with 3.4.5 and 6.0.6
 modPhred | 1.0b
 
 
-## Expected Output and Downstream Analyses
+## Expected Output
 
 In all  3 options, ModPhred will generate fastq and fastm files and align them to the reference with minimap2. It will store modification information both in the FASTQ and BAM files, in the QUALITY INFORMATION.
 
