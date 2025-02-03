@@ -39,7 +39,7 @@ git clone https://github.com/novoalab/m6ABasecaller_dev.git
 ## Running the code
 There are 3 possible options to run the code:
 
- - [Option 1 : Master of Pores Nextflow workflow](#option-1-(suggested)-m6a-basecalling-and-modification-encoding-with-master-of-pores). This is the **recommended** option, as it does not require any software/dependencies to be installed by the user.
+ - [Option 1 : Master of Pores Nextflow workflow](#option-1-m6a-basecalling-and-modification-encoding-with-master-of-pores). This is the **recommended** option, as it does not require any software/dependencies to be installed by the user.
 - [Option 2: Basecalling with m6ABasecaller model + modification encoding with modPhred](#option-2-basecalling-with-m6A-basecalling-model-and-modification-encoding-with-modphred)
 - [Option 3: ModPhred on the fly](#option-3-modphred-on-the-fly)
 
