@@ -186,7 +186,7 @@ Once you have the ``mod.gz file``, you can proceed to analysis at per-site and p
   
 If you find this work useful, please cite: 
 
-Cruciani S*, Delgado-Tejedor A*, Pryszcz LP*, Medina R, Llovera L and Novoa EM. De novo basecalling of m6A  modifications at single-molecule and single-nucleotide resolution. BioRxiv 2023 (under review). 
+Cruciani, S., Delgado-Tejedor, A., Pryszcz, L.P. et al. De novo basecalling of RNA modifications at single molecule and nucleotide resolution. Genome Biol 26, 38 (2025). https://doi.org/10.1186/s13059-025-03498-6 
   
 ## Contact
 If you have any issues running this code, please go first over previous [issues](https://github.com/novoalab/m6ABasecaller/issues). If you still can't figure it out based on the prior responses/issues raised, please open a new issue. Thanks!   
